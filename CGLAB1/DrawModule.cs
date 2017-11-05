@@ -106,9 +106,17 @@ namespace CGLAB1
             }
         } 
 
-        public void UpdateCanvas()
+        public void ClearConnections(WChain wc)
         {
-            
+            ClearConnections(wc, wc.Shell);
+            ClearConnections(wc, wc.CBShell);
+            ClearConnections(wc, wc.QBShell);
+        }
+
+        public void ClearPoint(WPoint wp)
+        {
+            if (canvas.Children.Contains(wp.Shell))
+                canvas.Children.Remove(wp.Shell);
         }
     }
 }

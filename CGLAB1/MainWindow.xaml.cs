@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace CGLAB1
 {
@@ -109,17 +110,21 @@ namespace CGLAB1
         {
             DM.ClearConnections(WChains[ChainBox.SelectedIndex], WChains[ChainBox.SelectedIndex].Shell);
             DM.DrawCubicBezier(WChains[ChainBox.SelectedIndex]);
+        }
 
-            BezierPointsBox.Items.Clear();
-            foreach (WChain wc in WChains)
-            {
-                foreach (Point p in wc.CBShell.Points)
-                {
-                    BezierPointsBox.Items.Add(p.ToString());
-                }
-                
-                BezierPointsBox.Items.Add("---");
-            }
+        private void QuadraticBezierBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeletePointBtn_Click(object sender, RoutedEventArgs e)
+        {
+            WChain wc = WChains[ChainBox.SelectedIndex];
+            DM.ClearPoint(wc.List[PointBox.SelectedIndex]);
+            wc.List.RemoveAt(PointBox.SelectedIndex);
+            DM.ClearConnections(wc);
+            DM.DrawConnections(wc);
+            UpdatePointList();
         }
     }
 }

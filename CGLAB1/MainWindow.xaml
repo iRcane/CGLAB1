@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CGLAB1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580" Width="1050">
+        Title="MainWindow" Height="580" Width="850">
     <Grid>
         <Border BorderThickness="0.5" BorderBrush="Black" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,50,0,0" Height="450" Width="550" >
             <Canvas x:Name="canvas" HorizontalAlignment="Left" VerticalAlignment="Top" Height="450" Width="550" MouseLeftButtonUp="Canvas_MouseLeftButtonUp" Background="Transparent"/>
         </Border>
-        <ListBox x:Name="ChainBox" HorizontalAlignment="Left" Height="150" Margin="646,50,0,0" VerticalAlignment="Top" Width="147" SelectionChanged="ChainBox_SelectionChanged"/>
-        <ListBox x:Name="CommandBox" HorizontalAlignment="Left" Height="100" Margin="646,360,0,0" VerticalAlignment="Top" Width="147"/>
-        <ListBox x:Name="PointBox" HorizontalAlignment="Left" Height="150" Margin="646,205,0,0" VerticalAlignment="Top" Width="147" IsEnabled="False"/>
-        <Button x:Name="CubicBezierBtn" HorizontalAlignment="Left" Height="35" Margin="646,465,0,0" VerticalAlignment="Top" Width="102" Content="Cubic Bezier" Click="CubicBezierBtn_Click"/>
-        <ListBox x:Name="BezierPointsBox" HorizontalAlignment="Left" Height="410" Margin="841,50,0,0" VerticalAlignment="Top" Width="147"/>
+        <ListBox x:Name="ChainBox" HorizontalAlignment="Left" Height="100" Margin="646,50,0,0" VerticalAlignment="Top" Width="147" SelectionChanged="ChainBox_SelectionChanged"/>
+        <ListBox x:Name="CommandBox" HorizontalAlignment="Left" Height="55" Margin="646,310,0,0" VerticalAlignment="Top" Width="147"/>
+        <ListBox x:Name="PointBox" HorizontalAlignment="Left" Height="150" Margin="646,155,0,0" VerticalAlignment="Top" Width="147"/>
+        <Button x:Name="CubicBezierBtn" HorizontalAlignment="Left" Height="35" Margin="646,420,0,0" VerticalAlignment="Top" Width="102" Content="Cubic Bezier" Click="CubicBezierBtn_Click"/>
+        <Button x:Name="DeletePointBtn" HorizontalAlignment="Left" Height="35" Margin="646,465,0,0" VerticalAlignment="Top" Width="102" Content="Delete point" Click="DeletePointBtn_Click"/>
+        <Button x:Name="QuadraticBezierBtn" HorizontalAlignment="Left" Height="35" Margin="646,375,0,0" VerticalAlignment="Top" Width="102" Content="Quadratic Bezier" Click="QuadraticBezierBtn_Click"/>
     </Grid>
 </Window>
